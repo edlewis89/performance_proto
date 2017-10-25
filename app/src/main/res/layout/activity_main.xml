@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.livingpages.cellinfoproto.MainActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_media_pause" />
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:weightSum="1">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:weightSum="1">
+
+            <Switch
+                android:id="@+id/polling_switch1"
+                android:layout_width="154dp"
+                android:layout_height="match_parent"
+                android:text="@string/poll_on_off" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="?attr/colorPrimary"
+            android:weightSum="1"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <Spinner
+                android:id="@+id/polling_rate_spinner"
+                android:layout_width="82dp"
+                android:layout_height="match_parent"
+                android:dropDownWidth="match_parent"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/poll_count_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reports: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/poll_count_text"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/mph_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mph: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/device_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:visibility="visible"
+                tools:text="0" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mode_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:weightSum="1">
+
+            <Switch
+                android:id="@+id/reporting_mode_switch"
+                android:layout_width="154dp"
+                android:layout_height="match_parent"
+                android:text="@string/reporting_mode_switch_label" />
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/content_main"
+        android:layout_height="263dp"></include>
+
+</android.support.design.widget.CoordinatorLayout>
